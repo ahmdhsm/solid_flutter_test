@@ -50,15 +50,14 @@ jobs:
               --fatal-style \
               --verbose
             dart run dart_code_metrics:metrics \
-              check-unused-files \
+              check-unused-code \
               $dirs_to_analyse \
               --fatal-unused \
               --verbose
             dart run dart_code_metrics:metrics \
-              check-unused-code \ 
+              check-unused-files \
               $dirs_to_analyse \
-              --fatal-unused \
-              --verbose
+              --fatal-unused
           fi
 
       - name: Check formatting
